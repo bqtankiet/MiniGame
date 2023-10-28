@@ -26,7 +26,9 @@ public class Game2048Input extends KeyAdapter {
 		case KeyEvent.VK_DOWN -> {
 			gamePanel.moveDown();
 		}
-
+		case KeyEvent.VK_SPACE -> {
+			gamePanel.restartGame();
+		}
 		}
 	}
 }

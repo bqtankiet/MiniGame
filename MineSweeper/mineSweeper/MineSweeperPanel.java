@@ -11,12 +11,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class GameInterface extends JPanel {
+public class MineSweeperPanel extends JPanel {
 
 	Minesweeper game;
 	Square[][] squares;
 
-	public GameInterface(Minesweeper game) {
+	public MineSweeperPanel(Minesweeper game) {
 		this.game = game;
 		this.squares = new Square[game.rowSize][game.colSize];
 		this.setup();

@@ -29,39 +29,35 @@ public class Game2048Panel extends JPanel {
 		this.addKeyListener(new Game2048Input(this));
 
 		game.initializeBoard();
-		game.printBoard();
 	}
 
 	public void moveRight() {
 		game.moveRight();
 		repaint();
 		System.out.println("right");
-		game.printBoard();
 	}
 
 	public void moveLeft() {
 		game.moveLeft();
 		repaint();
 		System.out.println("left");
-		game.printBoard();
 	}
 
 	public void moveUp() {
 		game.moveUp();
 		repaint();
 		System.out.println("up");
-		game.printBoard();
 	}
 
 	public void moveDown() {
 		game.moveDown();
 		repaint();
 		System.out.println("down");
-		game.printBoard();
 	}
 
 	@Override
 	protected void paintComponent(Graphics g) {
+		game.printBoard();
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		for (int r = 0; r < game.board.length; r++) {
@@ -79,5 +75,15 @@ public class Game2048Panel extends JPanel {
 				}
 			}
 		}
+	}
+
+	public void restartGame() {
+		for (int i = 0; i < ROWS; i++) {
+			for (int j = 0; j < COLS; j++) {
+				game.board[i][j] = 0;
+			}
+		}
+		game.initializeBoard();
+		repaint();
 	}
 }

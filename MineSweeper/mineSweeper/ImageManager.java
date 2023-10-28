@@ -9,7 +9,7 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
-import mineSweeper.GameInterface.Square;
+import mineSweeper.MineSweeperPanel.Square;
 
 public class ImageManager {
 	static ImageIcon squareImage;

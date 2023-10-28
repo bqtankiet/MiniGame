@@ -7,7 +7,7 @@ public class Minesweeper {
 	int bombs;
 	int[][] board;
 	boolean gameOver;
-	GameInterface gameInterface;
+	MineSweeperPanel gameInterface;
 
 	public Minesweeper(int rowSize, int colSize, int bombs) {
 		super();
@@ -17,7 +17,7 @@ public class Minesweeper {
 		this.board = new int[rowSize][colSize];
 		this.randomBomb();
 		this.fillNumber();
-		this.gameInterface = new GameInterface(this);
+		this.gameInterface = new MineSweeperPanel(this);
 	}
 
 	public void randomBomb() {
